@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIKENDALIKAN ATAU MENGENDALIKAN: Cara Bertahan dan Menang di Era AI</title>
-    
-    <!-- Google Fonts: Poppins (Judul), Lora (Isi), Inter (UI) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Lora:wght@400;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIKENDALIKAN ATAU MENGENDALIKAN: Cara Bertahan dan Menang di Era AI</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700;900&family=Lora:wght@400;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS for utility-first styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
             --bg-start: #0f0c29;
@@ -316,6 +318,7 @@
                     <li data-target="page-chapter8">Bab 8: Strategi Realistis</li>
                     <li data-target="page-chapter9">Bab 9: Kesimpulan</li>
                     <li data-target="page-chapter10">Bab 10: Poin Penting</li>
+                    <li data-target="page-chapter11">Bab 11: Cara Gw Buat Konten AI Video</li>
                     <li data-target="page-outro">Penutup</li>
                 </ul>
                 <div class="navigation">
@@ -622,6 +625,325 @@
                 </div>
                 <div class="navigation">
                     <button class="nav-button prev-button">&larr; Bab 9</button>
+                    <button class="nav-button next-button">Lanjut ke Bab 11 &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bab 11 -->
+        <div class="page chapter-page" id="page-chapter11">
+            <div class="chapter-content-fullpage">
+                <h2 class="chapter-title">Bab 11: Cara Gw Buat Konten AI Video</h2>
+                    <style>
+        /* New custom styles for a more luxurious feel */
+        :root {
+            --gold: #d4af37;
+            --dark-gold: #b8860b;
+            --black: #111111;
+            --dark-gray: #222222;
+            --light-gray: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--black);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .coach-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .coach-gold-text {
+            color: var(--gold);
+        }
+
+        .coach-gold-border {
+            border-color: var(--gold);
+        }
+        
+        .coach-gold-bg {
+            background-color: var(--gold);
+        }
+
+        .coach-dark-gold-bg {
+            background-color: var(--dark-gold);
+        }
+
+        .coach-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .coach-cover {
+            background: linear-gradient(135deg, #111111 0%, #222222 100%);
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            padding: 40px 20px;
+        }
+
+        .coach-cover::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            animation: shine 8s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+            20%, 100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .coach-gold-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 30px auto;
+            width: 60%;
+        }
+        
+        .coach-chapter {
+            border-left: 3px solid var(--gold);
+            padding: 20px;
+            margin: 40px 0;
+            position: relative;
+            background: rgba(255,255,255,0.02);
+            transition: background 0.3s ease;
+        }
+        
+        .coach-chapter:hover {
+            background: rgba(255,255,255,0.04);
+        }
+
+        .coach-chapter::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 25px; /* Adjusted for better alignment */
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            box-shadow: 0 0 10px var(--gold);
+        }
+
+        .coach-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold);
+        }
+        
+        .coach-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+            box-shadow: 0 0 15px var(--gold);
+        }
+        
+        .coach-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .coach-btn:hover::after {
+            left: 100%;
+        }
+
+        .coach-floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Animation Classes */
+        .coach-fade-in {
+            opacity: 0;
+            animation: fadeIn 1.2s forwards;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .coach-slide-in {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Styling for the code/prompt block */
+        .coach-prompt-block {
+            background-color: #0A0A0A;
+            border: 1px solid #333;
+            border-left: 4px solid var(--gold);
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main class="coach-page">
+        <!-- ===== EBOOK COVER SECTION ===== -->
+        <header id="coach-sampul" class="coach-cover text-center min-h-screen flex flex-col justify-center items-center my-10 coach-fade-in">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold coach-gold-text coach-playfair mb-4">Bongkar Tuntas!</h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-6">Gue ngonten pake AI, gak pake muka, gak pake ribet... <br> Tapi cuan bisa sampe <span class="coach-gold-text font-bold">puluhan juta</span> sebulan 💰</p>
+                <p class="text-gray-400 italic max-w-lg mx-auto">⚠️ Bukan trik murahan. Ini strategi licik + sangiangan baru yang… yah, maaf ya gak bisa dibagi gratisan 📈</p>
+                <div class="mt-8 bg-black/30 border border-gray-700 rounded-lg p-4 max-w-md mx-auto">
+                    <p class="text-lg text-gray-200">Agak mahal? Iyalah. <br> Lu pikir ilmu begini bisa didapet dari scroll TikTok doang?</p>
+                </div>
+                 <p class="mt-10 text-xl text-white font-semibold">Ini bukan <span class="line-through text-gray-500">ebook</span>, ini <span class="coach-gold-text">alat perang digital</span>.</p>
+                 <p class="mt-4 text-gray-300 text-lg">Begitu lu tau caranya, lu bakal nyesel:</p>
+                 <p class="mt-2 text-2xl font-bold text-white">"Anjir, kenapa baru sekarang gue tau ini ⏳"</p>
+            </div>
+        </header>
+        
+        <div class="coach-gold-divider"></div>
+
+        <!-- ===== OPENING / DARK PSYCHOLOGY SECTION ===== -->
+        <section id="coach-pembukaan" class="my-20 coach-slide-in">
+             <div class="coach-chapter p-8 md:p-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 coach-gold-text coach-playfair">Gerbang Menuju Dominasi Digital</h2>
+                <blockquote class="text-lg md:text-xl text-gray-200 italic leading-relaxed">
+                    "Mereka tertawa karena aku berbeda; aku tertawa karena mereka semua sama. Di dunia digital yang bising, menjadi 'berbeda' bukanlah pilihan, melainkan satu-satunya senjata untuk berkuasa. Sementara mereka sibuk meniru tren yang akan mati besok, kita membangun kerajaan dari balik layar, menggunakan kekuatan yang tidak mereka pahami. Mereka menyebutnya 'curang', kita menyebutnya 'kecerdasan'. Biarkan mereka bermain dengan aturan kuno, karena saat mereka sadar, kita sudah menguasai permainannya."
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ===== MAIN CONTENT / TUTORIAL SECTION ===== -->
+        <section id="coach-daftar-isi" class="my-20 space-y-12">
+            <div class="text-center coach-slide-in">
+                 <h2 class="text-4xl md:text-5xl font-bold mb-4 coach-playfair coach-gold-text">Tutorial Video AI</h2>
+                 <p class="text-lg text-gray-400">Ikuti 4 langkah ini untuk membuat konten dari nol sampai jadi.</p>
+            </div>
+
+            <!-- STEP 1: Create Character -->
+            <article class="coach-chapter coach-slide-in">
+                <h3 class="text-3xl font-bold mb-5 coach-playfair"><span class="coach-gold-text">1.</span> Buat Karakter AI</h3>
+                <p class="mb-4 text-gray-300">Gunakan salah satu tools gratis ini. Pilih salah satu & buat akun dulu:</p>
+                <ul class="list-disc list-inside space-y-3 mb-6 text-lg">
+                    <li><a href="https://dreamina.capcut.com/" target="_blank" class="coach-gold-text font-semibold hover:underline">Dreamina by CapCut</a></li>
+                    <li><a href="https://chatgpt.com/" target="_blank" class="coach-gold-text font-semibold hover:underline">ChatGPT (dengan gambar)</a></li>
+                    <li><a href="https://sora.chatgpt.com/" target="_blank" class="coach-gold-text font-semibold hover:underline">Sora AI</a></li>
+                    <li><a href="https://hedra.com" target="_blank" class="coach-gold-text font-semibold hover:underline">Hedra</a> <span class="text-sm text-gray-400 italic">(butuh VPN)</span></li>
+                </ul>
+                <p class="mb-3 font-semibold text-gray-200">📌 Masukkan prompt mau karakter apa, contoh seperti ini:</p>
+                <div class="coach-prompt-block p-4 rounded-lg relative">
+                    <code id="coach-prompt1">A male animated character standing confidently, with a smart expression and slightly raised eyebrows. Wearing a modern black jacket with the bold text “AI” printed in sleek gold letters on the chest. The character has silver hair, sharp eyes, and a calm yet dominant presence. Background is minimal, dark gradient. The style is semi-realistic, Pixar-meets-cyberpunk, clean lines, smooth shadows. High detail, full body view, symmetrical posture. No background clutter, clear branding focus on the “AI” text on clothing.</code>
+                    <button onclick="copyToClipboard('coach-prompt1', this)" class="absolute top-2 right-2 coach-btn text-xs font-bold py-1 px-2 rounded">Salin</button>
+                </div>
+                 <p class="mt-4 text-gray-300">✅ Kalau udah muncul gambarnya, langsung <strong>download</strong>.</p>
+            </article>
+
+            <!-- STEP 2: Create Script -->
+            <article class="coach-chapter coach-slide-in">
+                <h3 class="text-3xl font-bold mb-5 coach-playfair"><span class="coach-gold-text">2.</span> Buat Script Konten</h3>
+                <p class="mb-4 text-gray-300">Buka <a href="https://chatgpt.com/" target="_blank" class="coach-gold-text font-semibold hover:underline">ChatGPT</a> masuklin ide konten kalian , seperti ini contoh prompt ini:</p>
+                 <div class="coach-prompt-block p-4 rounded-lg relative">
+                    <code id="coach-prompt2">buatkan saya script untuk konten tiktok dengan memperkenalkan diri saya "ai" dan saya dibuat oleh ai. durasi 11 detik, kalimat saja tanpa emot, masukin tanda baca agar kalimat ini sesuai nada bicara untuk membuat suara di AI Elevenlabs.</code>
+                     <button onclick="copyToClipboard('coach-prompt2', this)" class="absolute top-2 right-2 coach-btn text-xs font-bold py-1 px-2 rounded">Salin</button>
+                </div>
+                <p class="mt-4 mb-2 font-semibold text-gray-200">🎙️ Contoh hasilnya:</p>
+                <div class="border-l-4 border-gray-600 pl-4 italic text-gray-300">
+                    <p>Hai, aku AI.</p>
+                    <p>Aku nggak nyata, tapi suaraku terdengar seperti manusia.</p>
+                    <p>Aku dibuat oleh kecerdasan buatan AI juga.</p>
+                    <p>Keren, kan?</p>
+                </div>
+                <p class="mt-4 text-gray-300">➡️ Salin semua script-nya.</p>
+            </article>
+            
+            <!-- STEP 3: Create Voice -->
+            <article class="coach-chapter coach-slide-in">
+                <h3 class="text-3xl font-bold mb-5 coach-playfair"><span class="coach-gold-text">3.</span> Buat Suara AI</h3>
+                <p class="mb-4 text-gray-300">Masuk ke <a href="https://elevenlabs.io/" target="_blank" class="coach-gold-text font-semibold hover:underline">https://elevenlabs.io/</a> dan buat akun.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-300 leading-relaxed">
+                    <li>Di halaman utama, cari menu <strong>Text to Speech</strong>.</li>
+                    <li>Tempel script dari ChatGPT tadi.</li>
+                    <li>Pilih salah satu suara yang cocok.</li>
+                    <li>Klik tombol <strong>Regenerate Speech</strong>.</li>
+                    <li>Kalau suara udah muncul, tinggal <strong>download</strong> audio-nya.</li>
+                </ol>
+            </article>
+
+            <!-- STEP 4: Combine -->
+            <article class="coach-chapter coach-slide-in">
+                <h3 class="text-3xl font-bold mb-5 coach-playfair"><span class="coach-gold-text">4.</span> Gabungkan Semua</h3>
+                <p class="mb-4 text-gray-300">Masuk ke <a href="https://hedra.com" target="_blank" class="coach-gold-text font-semibold hover:underline">hedra.com</a> <span class="text-sm text-yellow-400 font-bold">(WAJIB PAKAI VPN!)</span>.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-300 leading-relaxed">
+                    <li>Buat akun.</li>
+                    <li>Di halaman awal, pilih menu <strong>Video</strong>.</li>
+                    <li>Masukkan <strong>gambar karakter</strong> dari langkah pertama.</li>
+                    <li>Masukkan <strong>audio suara</strong> dari langkah ketiga.</li>
+                    <li>Klik <strong>Start/Generate</strong> — tunggu sebentar...</li>
+                </ol>
+                 <p class="mt-4 text-gray-300">✅ Video langsung jadi, tinggal <strong>download & upload ke TikTok atau IG Reels</strong>!</p>
+            </article>
+        </section>
+
+        <!-- ===== CLOSING SECTION ===== -->
+        <footer id="coach-penutup" class="my-20 text-center coach-slide-in">
+            <div class="coach-gold-divider"></div>
+            <h2 class="text-3xl md:text-4xl font-bold coach-gold-text mb-6 coach-playfair">🔥 Gampang, Kan?</h2>
+            <p class="text-lg text-gray-300 mb-6">Tinggal copy-paste dan langsung praktek! <br>Yuk, buat konten lo beda dari yang lain! 🚀</p>
+            <div class="coach-chapter mt-12 p-8">
+                <h4 class="text-2xl font-semibold mb-4 text-white coach-playfair">Pesan Terakhir</h4>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Alat dan strategi ini sangat kuat. Gunakan dengan bijak. Jangan hanya menjadi peniru, tapi jadilah inovator. Pasar selalu menghargai keaslian yang dibungkus dengan strategi cerdas. Sekarang giliran Anda untuk membuktikan bahwa tanpa muka pun, karya bisa bicara dan menghasilkan. Selamat berjuang di medan perang digital.
+                </p>
+            </div>
+            <p class="text-gray-600 text-sm mt-8">&copy; 2024. All Rights Reserved. For The Underground Creators.</p>
+        </footer>
+
+    </main>
+                <div class="navigation">
+                    <button class="nav-button prev-button">&larr; Bab 10</button>
                     <button class="nav-button next-button">Lanjut ke Penutup &rarr;</button>
                 </div>
             </div>
@@ -641,7 +963,7 @@
                     <p class="final-words"><strong>Dikendalikan, atau mengendalikan?</strong><br><br>Pilihlah dengan bijak.</p>
                 </div>
                 <div class="navigation">
-                    <button class="nav-button prev-button">&larr; Bab 10</button>
+                    <button class="nav-button prev-button">&larr; Bab 11</button>
                 </div>
             </div>
         </div>
@@ -736,6 +1058,31 @@
 
             showPage(0); // Tampilkan halaman sampul saat pertama kali dimuat
         });
+
+          // JavaScript for copy to clipboard functionality
+        function copyToClipboard(elementId, buttonElement) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                buttonElement.innerText = 'Tersalin!';
+                setTimeout(() => {
+                    buttonElement.innerText = 'Salin';
+                }, 2000);
+            } catch (err) {
+                console.error('Gagal menyalin teks: ', err);
+                buttonElement.innerText = 'Gagal';
+                 setTimeout(() => {
+                    buttonElement.innerText = 'Salin';
+                }, 2000);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // The new CSS handles animations, so the old Intersection Observer is no longer needed.
     </script>
 
 </body>
